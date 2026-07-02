@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quitanda Sabor da Terra</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div>
+        <h1>Quitanda Sabor da Terra</h1>
+        <p>Sistema de Controle de Estoque</p>
+        </div>
+
+        <button id="btnCadastrar">Cadastrar</button>
+        <button id="btnAtualizar">Atualizar</button>
+        <button id="btnDeletar">Deletar</button>
+
+    </header>
+
+    <main>
+        <h2>Produtos Cadastrados</h2>
+        <div id="produtos" class="grid">
+
+        </div>
+    </main>
+
+    <!-- Modal Cadastrar-->
+    <div id="modalCadastro">
+        <div class="janela">
+            <h2>Cadastro de Produto</h2>
+            <input type="text" id="nome" placeholder="nome">
+            <input type="text" id="categoria" placeholder="categoria">
+            <input type="text" id="preco" placeholder="preco">
+            <input type="text" id="quantidade" placeholder="quantidade">
+            <input type="text" id="unidade" placeholder="unidade">
+            <div class="botoes">
+                <button id="btnSalvar">Salvar</button>
+                <button class="btnCancelar">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
