@@ -26,6 +26,13 @@
 |---|---|---|---|---|
 | 2026-10-15 | `SECURITY_CHANGELOG.md` | Criação | Apenas documentação e inventário; nenhum código original removido | Histórico de commits do próprio arquivo |
 
+
+| 2026-10-15 | `server.js` | Substituição | Senha de MySQL embutida no código foi substituída por `process.env.DB_PASS`; host, usuário e nome do banco agora aceitam variáveis de ambiente; `dotenv` carrega um `.env` local | [Versão original (antes da alteração)](https://github.com/tomaszeswisc/spa_quitanda/blob/20f7af476a47db4c41af71301165be5ea7619e10/server.js); valor antigo da senha não deve ser reutilizado |
+| 2026-10-15 | `package.json` | Dependência adicionada | Adicionado `dotenv` para carregar `.env` local | [Versão original](https://github.com/tomaszeswisc/spa_quitanda/blob/a0e3651aea343bedc54ce300089ad8ce8fc5bee4/package.json) |
+| 2026-10-15 | `.gitignore` e `.env.example` | Configuração | Ignorar credenciais locais e documentar variáveis de configuração | Conferir histórico de commits |
+
+**Ação exigida no computador:** antes de executar, crie `.env` a partir de `.env.example`, preencha `DB_PASS` com uma **nova senha** do banco e execute `npm install`. Sem `DB_PASS`, a aplicação pode falhar ao conectar. O segredo antigo continua no histórico e precisa ser revogado e removido posteriormente com um processo de limpeza coordenado.
+
 ## Recuperação
 
 Consulte o histórico de commits em https://github.com/tomaszeswisc/spa_quitanda/commits e examine a versão anterior de cada arquivo pelo seu commit ou blob SHA. **Não restaure senhas antigas expostas**, pois devem ser revogadas. Para recuperar uma função ou regra segura, compare o diff e restaure somente o código necessário.
