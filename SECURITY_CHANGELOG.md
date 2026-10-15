@@ -36,3 +36,10 @@
 ## Recuperação
 
 Consulte o histórico de commits em https://github.com/tomaszeswisc/spa_quitanda/commits e examine a versão anterior de cada arquivo pelo seu commit ou blob SHA. **Não restaure senhas antigas expostas**, pois devem ser revogadas. Para recuperar uma função ou regra segura, compare o diff e restaure somente o código necessário.
+
+## 2026-10-15 — conferência de sintaxe automatizada
+
+- Novo arquivo planejado: `.github/workflows/check-syntax.yml`, execução de `node --check server.js` no GitHub Actions.
+- Escopo: verificação estática de sintaxe; não conecta ao banco nem executa login.
+- Remoções: nenhuma. Código-fonte, rotas, segredos e arquivos de configuração não modificados nesta etapa.
+- Recuperação: remover apenas o workflow ou reverter seu commit. O código anterior continua intacto.
